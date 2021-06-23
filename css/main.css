@@ -1,0 +1,244 @@
+
+/* ==========Задание №1========== */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 18px;
+}
+
+/* ==========Header========== */
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.logo {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    color: orange;
+    font-size: 28px;
+    position: relative;
+}
+
+.logo::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 0;
+    background-color: orange;
+    /* background: linear-gradient(90deg, orange 20%, rgb(235, 77, 29) 80%); */
+    
+}
+
+.logo::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    right: 0;
+    bottom: 0;
+    background-color: orange;
+    /* background: linear-gradient(90deg, rgb(235, 77, 29) 20%, orange 80%); */
+}
+
+.logo span {
+    color: rgb(235, 77, 29);
+}
+
+.nav__list {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.nav__link {
+    position: relative;
+    color: #fff;
+    transition: .3s;
+}
+
+.nav__link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    background-color: orange;
+    transition: all .3s ease-in-out;
+}
+
+.nav__link:hover {
+    color: orange;
+}
+
+.nav__link:hover::before {
+    width: 100%;
+}
+
+/* ==========Main========== */
+.main {
+    display: flex;
+    /* height: 100%; */
+    text-align: center;
+    line-height: 1.3;
+}
+
+.title {
+    flex-basis: 60%;
+    padding: 40px 20px;
+    line-height: 1.4;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+    margin: 30px 0;
+    font-weight: 700;
+}
+
+.title__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding: 0 40px;
+}
+
+.title__card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 350px;
+    margin: 20px 10px;
+    padding: 0 10px;
+    transition: transform .3s;
+}
+
+.title__card:hover {
+    transform: scale(1.1);
+}
+
+.title__card img {
+    width: 84px;
+    margin: 20px 0;
+}
+
+.title__card h2 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.title__card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    flex: 1;
+}
+
+.card__btn {
+    margin-bottom: 20px;
+    padding: 5px 20px;
+    border-radius: 30px;
+    border: 1px solid;
+    color: #fff;
+    background-color: rgb(221, 134, 19);
+    font-size: 18px;
+}
+
+.aside {
+    flex-basis: 20%;
+    padding: 20px 0;
+    background-color: darkgray;
+}
+
+.aside--left {
+    order: -1;
+}
+
+
+
+
+/* ==========Footer========== */
+
+.footer {
+    display: flex;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    font-size: 24px;
+    padding: 20px;
+    justify-content: center;
+    margin-top: auto;
+}
+
+/* ==========Задание №3========== */
+
+.content {
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    padding: 40px 40px;
+    background-color: darkgrey;
+}
+
+.content__wrap {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    width: 500px;
+    border: 3px solid #000;
+    height: 150px;
+    border-radius: 30px 30px 0 0;
+    overflow: hidden;
+}
+
+.content__box {
+    display: flex;
+    height: 50%;
+    width: 30%;
+    flex-grow: 1;
+    /* padding: 25px; */
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+.content__box:nth-child(1) {
+    order: 4;
+    flex-grow: 1;
+    background-color: rgb(221, 8, 8);
+}
+
+.content__box:nth-child(2) {
+    order: 2;
+    background-color: rgb(38, 147, 236);
+}
+
+
+.content__box:nth-child(3) {
+    background-color: rgb(117, 6, 190);
+}
+
+.content__box:nth-child(4) {
+    order: 3;
+    background-color: rgb(18, 233, 100);
+}
+
+.content__box:nth-child(5) {
+    background-color: rgb(252, 172, 0);
+    order: 5;
+}
